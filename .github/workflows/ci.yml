@@ -11,7 +11,7 @@ jobs:
       with:
         node-version: '12.x'
     - name: AutoVersion
-      uses: npm install -g npm-auto-version
+      run: npm install -g npm-auto-version
     - name: Checkout
       uses: actions/checkout@v2
     - name: Install
