@@ -22,12 +22,12 @@ class Resource {
     /**
      * Constructs a new <code>Resource</code>.
      * @alias module:model/Resource
-     * @param type {module:model/Resource.TypeEnum} 
+     * @param protocol {module:model/Resource.ProtocolEnum} 
      * @param url {String} 
      */
-    constructor(type, url) { 
+    constructor(protocol, url) { 
         
-        Resource.initialize(this, type, url);
+        Resource.initialize(this, protocol, url);
     }
 
     /**
@@ -35,8 +35,8 @@ class Resource {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, url) { 
-        obj['type'] = type;
+    static initialize(obj, protocol, url) { 
+        obj['protocol'] = protocol;
         obj['url'] = url;
     }
 
@@ -51,8 +51,8 @@ class Resource {
         if (data) {
             obj = obj || new Resource();
 
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('protocol')) {
+                obj['protocol'] = ApiClient.convertToType(data['protocol'], 'String');
             }
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
@@ -65,9 +65,9 @@ class Resource {
 }
 
 /**
- * @member {module:model/Resource.TypeEnum} type
+ * @member {module:model/Resource.ProtocolEnum} protocol
  */
-Resource.prototype['type'] = undefined;
+Resource.prototype['protocol'] = undefined;
 
 /**
  * @member {String} url
@@ -79,11 +79,11 @@ Resource.prototype['url'] = undefined;
 
 
 /**
- * Allowed values for the <code>type</code> property.
+ * Allowed values for the <code>protocol</code> property.
  * @enum {String}
  * @readonly
  */
-Resource['TypeEnum'] = {
+Resource['ProtocolEnum'] = {
 
     /**
      * value: "ws"

@@ -22,12 +22,12 @@ class Endpoint {
     /**
      * Constructs a new <code>Endpoint</code>.
      * @alias module:model/Endpoint
-     * @param type {module:model/Endpoint.TypeEnum} 
+     * @param protocol {module:model/Endpoint.ProtocolEnum} 
      * @param url {String} 
      */
-    constructor(type, url) { 
+    constructor(protocol, url) { 
         
-        Endpoint.initialize(this, type, url);
+        Endpoint.initialize(this, protocol, url);
     }
 
     /**
@@ -35,8 +35,8 @@ class Endpoint {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, url) { 
-        obj['type'] = type;
+    static initialize(obj, protocol, url) { 
+        obj['protocol'] = protocol;
         obj['url'] = url;
     }
 
@@ -51,8 +51,8 @@ class Endpoint {
         if (data) {
             obj = obj || new Endpoint();
 
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('protocol')) {
+                obj['protocol'] = ApiClient.convertToType(data['protocol'], 'String');
             }
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
@@ -65,9 +65,9 @@ class Endpoint {
 }
 
 /**
- * @member {module:model/Endpoint.TypeEnum} type
+ * @member {module:model/Endpoint.ProtocolEnum} protocol
  */
-Endpoint.prototype['type'] = undefined;
+Endpoint.prototype['protocol'] = undefined;
 
 /**
  * @member {String} url
@@ -79,11 +79,11 @@ Endpoint.prototype['url'] = undefined;
 
 
 /**
- * Allowed values for the <code>type</code> property.
+ * Allowed values for the <code>protocol</code> property.
  * @enum {String}
  * @readonly
  */
-Endpoint['TypeEnum'] = {
+Endpoint['ProtocolEnum'] = {
 
     /**
      * value: "http"

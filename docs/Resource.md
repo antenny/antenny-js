@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | 
+**protocol** | **String** |  | 
 **url** | **String** |  | 
 
 
 
-## Enum: TypeEnum
+## Enum: ProtocolEnum
 
 
 * `ws` (value: `"ws"`)
