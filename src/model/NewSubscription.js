@@ -24,10 +24,14 @@ class NewSubscription {
     /**
      * Constructs a new <code>NewSubscription</code>.
      * @alias module:model/NewSubscription
+     * @param customerId {String} 
+     * @param region {module:model/NewSubscription.RegionEnum} 
+     * @param resource {module:model/Resource} 
+     * @param endpoint {module:model/Endpoint} 
      */
-    constructor() { 
+    constructor(customerId, region, resource, endpoint) { 
         
-        NewSubscription.initialize(this);
+        NewSubscription.initialize(this, customerId, region, resource, endpoint);
     }
 
     /**
@@ -35,7 +39,11 @@ class NewSubscription {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, customerId, region, resource, endpoint) { 
+        obj['customerId'] = customerId;
+        obj['region'] = region;
+        obj['resource'] = resource;
+        obj['endpoint'] = endpoint;
     }
 
     /**
@@ -51,6 +59,12 @@ class NewSubscription {
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('customerId')) {
+                obj['customerId'] = ApiClient.convertToType(data['customerId'], 'String');
+            }
+            if (data.hasOwnProperty('region')) {
+                obj['region'] = ApiClient.convertToType(data['region'], 'String');
             }
             if (data.hasOwnProperty('resource')) {
                 obj['resource'] = Resource.constructFromObject(data['resource']);
@@ -71,6 +85,16 @@ class NewSubscription {
 NewSubscription.prototype['name'] = undefined;
 
 /**
+ * @member {String} customerId
+ */
+NewSubscription.prototype['customerId'] = undefined;
+
+/**
+ * @member {module:model/NewSubscription.RegionEnum} region
+ */
+NewSubscription.prototype['region'] = undefined;
+
+/**
  * @member {module:model/Resource} resource
  */
 NewSubscription.prototype['resource'] = undefined;
@@ -82,6 +106,81 @@ NewSubscription.prototype['endpoint'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>region</code> property.
+ * @enum {String}
+ * @readonly
+ */
+NewSubscription['RegionEnum'] = {
+
+    /**
+     * value: "us-east-1"
+     * @const
+     */
+    "us-east-1": "us-east-1",
+
+    /**
+     * value: "us-east-2"
+     * @const
+     */
+    "us-east-2": "us-east-2",
+
+    /**
+     * value: "us-west-1"
+     * @const
+     */
+    "us-west-1": "us-west-1",
+
+    /**
+     * value: "us-west-2"
+     * @const
+     */
+    "us-west-2": "us-west-2",
+
+    /**
+     * value: "ap-northeast-1"
+     * @const
+     */
+    "ap-northeast-1": "ap-northeast-1",
+
+    /**
+     * value: "ap-northeast-2"
+     * @const
+     */
+    "ap-northeast-2": "ap-northeast-2",
+
+    /**
+     * value: "ap-southeast-1"
+     * @const
+     */
+    "ap-southeast-1": "ap-southeast-1",
+
+    /**
+     * value: "ap-southeast-2"
+     * @const
+     */
+    "ap-southeast-2": "ap-southeast-2",
+
+    /**
+     * value: "eu-central-1"
+     * @const
+     */
+    "eu-central-1": "eu-central-1",
+
+    /**
+     * value: "eu-west-1"
+     * @const
+     */
+    "eu-west-1": "eu-west-1",
+
+    /**
+     * value: "eu-west-2"
+     * @const
+     */
+    "eu-west-2": "eu-west-2"
+};
 
 
 

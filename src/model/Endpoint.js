@@ -22,10 +22,12 @@ class Endpoint {
     /**
      * Constructs a new <code>Endpoint</code>.
      * @alias module:model/Endpoint
+     * @param type {module:model/Endpoint.TypeEnum} 
+     * @param url {String} 
      */
-    constructor() { 
+    constructor(type, url) { 
         
-        Endpoint.initialize(this);
+        Endpoint.initialize(this, type, url);
     }
 
     /**
@@ -33,7 +35,9 @@ class Endpoint {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, type, url) { 
+        obj['type'] = type;
+        obj['url'] = url;
     }
 
     /**

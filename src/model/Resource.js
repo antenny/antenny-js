@@ -22,10 +22,12 @@ class Resource {
     /**
      * Constructs a new <code>Resource</code>.
      * @alias module:model/Resource
+     * @param type {module:model/Resource.TypeEnum} 
+     * @param url {String} 
      */
-    constructor() { 
+    constructor(type, url) { 
         
-        Resource.initialize(this);
+        Resource.initialize(this, type, url);
     }
 
     /**
@@ -33,7 +35,9 @@ class Resource {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, type, url) { 
+        obj['type'] = type;
+        obj['url'] = url;
     }
 
     /**
