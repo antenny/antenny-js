@@ -13,16 +13,12 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - name: AutoVersion
-      run: npm install -g npm-auto-version
     - name: Install
       run: npm ci
     - name: Build
       run: npm run build --if-present
     - name: Test
       run: npm test
-    - name: AutoVersion
-      run: npm-auto-version
     - name: Version
       id: version
       run: |
