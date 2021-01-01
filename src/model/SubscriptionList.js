@@ -17,7 +17,7 @@ import Subscription from './Subscription';
 /**
  * The SubscriptionList model module.
  * @module model/SubscriptionList
- * @version 1.0.0
+ * @version 1.1.0
  */
 class SubscriptionList {
     /**

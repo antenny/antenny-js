@@ -13,16 +13,3 @@ Name | Type | Description | Notes
 **modified** | **Date** |  | [optional] 
 
 
-
-## Enum: LevelEnum
-
-
-* `INFO` (value: `"INFO"`)
-
-* `WARNING` (value: `"WARNING"`)
-
-* `ERROR` (value: `"ERROR"`)
-
-
-
-

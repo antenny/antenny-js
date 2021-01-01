@@ -20,7 +20,7 @@ import NewClient from '../model/NewClient';
 /**
 * Client service.
 * @module api/ClientApi
-* @version 1.0.0
+* @version 1.1.0
 */
 export default class ClientApi {
 

@@ -183,7 +183,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new antenny.SubscriptionApi();
-let custId = null; // String | Customer Id to get subscriptions
+let custId = "custId_example"; // String | Customer Id to get subscriptions
 let opts = {
   'sort': "sort_example", // String | Defines sort direction
   'limit': 56, // Number | Limits the number of returned items
@@ -202,7 +202,7 @@ apiInstance.listSubscriptions(custId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custId** | [**String**](.md)| Customer Id to get subscriptions | 
+ **custId** | **String**| Customer Id to get subscriptions | 
  **sort** | **String**| Defines sort direction | [optional] 
  **limit** | **Number**| Limits the number of returned items | [optional] 
  **startKey** | **String**| Defines start of page of results | [optional] 

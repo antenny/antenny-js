@@ -1,5 +1,4 @@
 .babelrc
-README.md
 docs/Client.md
 docs/ClientApi.md
 docs/ClientList.md

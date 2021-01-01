@@ -181,7 +181,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new antenny.ClientApi();
-let custId = null; // String | Customer Id to get clients for
+let custId = "custId_example"; // String | Customer Id to get clients for
 let opts = {
   'sort': "sort_example", // String | Defines sort direction
   'limit': 56, // Number | Limits the number of returned items
@@ -200,7 +200,7 @@ apiInstance.listClients(custId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custId** | [**String**](.md)| Customer Id to get clients for | 
+ **custId** | **String**| Customer Id to get clients for | 
  **sort** | **String**| Defines sort direction | [optional] 
  **limit** | **Number**| Limits the number of returned items | [optional] 
  **startKey** | **String**| Defines start of page of results | [optional] 

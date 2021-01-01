@@ -18,7 +18,7 @@ import Registration from '../model/Registration';
 /**
 * Registration service.
 * @module api/RegistrationApi
-* @version 1.0.0
+* @version 1.1.0
 */
 export default class RegistrationApi {
 

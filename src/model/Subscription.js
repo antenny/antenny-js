@@ -18,7 +18,7 @@ import Resource from './Resource';
 /**
  * The Subscription model module.
  * @module model/Subscription
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Subscription {
     /**
@@ -55,6 +55,12 @@ class Subscription {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('customerId')) {
+                obj['customerId'] = ApiClient.convertToType(data['customerId'], 'String');
+            }
+            if (data.hasOwnProperty('region')) {
+                obj['region'] = ApiClient.convertToType(data['region'], 'String');
+            }
             if (data.hasOwnProperty('resource')) {
                 obj['resource'] = Resource.constructFromObject(data['resource']);
             }
@@ -88,6 +94,16 @@ Subscription.prototype['id'] = undefined;
 Subscription.prototype['name'] = undefined;
 
 /**
+ * @member {String} customerId
+ */
+Subscription.prototype['customerId'] = undefined;
+
+/**
+ * @member {String} region
+ */
+Subscription.prototype['region'] = undefined;
+
+/**
  * @member {module:model/Resource} resource
  */
 Subscription.prototype['resource'] = undefined;
@@ -98,7 +114,7 @@ Subscription.prototype['resource'] = undefined;
 Subscription.prototype['endpoint'] = undefined;
 
 /**
- * @member {module:model/Subscription.StatusEnum} status
+ * @member {String} status
  */
 Subscription.prototype['status'] = undefined;
 
@@ -114,45 +130,6 @@ Subscription.prototype['modified'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-Subscription['StatusEnum'] = {
-
-    /**
-     * value: "PENDING"
-     * @const
-     */
-    "PENDING": "PENDING",
-
-    /**
-     * value: "CONNECTING"
-     * @const
-     */
-    "CONNECTING": "CONNECTING",
-
-    /**
-     * value: "CONNECTED"
-     * @const
-     */
-    "CONNECTED": "CONNECTED",
-
-    /**
-     * value: "ERRORED"
-     * @const
-     */
-    "ERRORED": "ERRORED",
-
-    /**
-     * value: "CANCELED"
-     * @const
-     */
-    "CANCELED": "CANCELED"
-};
 
 
 

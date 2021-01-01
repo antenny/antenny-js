@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Registration model module.
  * @module model/Registration
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Registration {
     /**
@@ -89,14 +89,12 @@ Registration.prototype['id'] = undefined;
 Registration.prototype['customerId'] = undefined;
 
 /**
- * Signing secret
  * @member {String} secret
  */
 Registration.prototype['secret'] = undefined;
 
 /**
- * Registration status
- * @member {module:model/Registration.StatusEnum} status
+ * @member {String} status
  */
 Registration.prototype['status'] = undefined;
 
@@ -122,45 +120,6 @@ Registration.prototype['modified'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-Registration['StatusEnum'] = {
-
-    /**
-     * value: "SUBSCRIBE-PENDING"
-     * @const
-     */
-    "SUBSCRIBE-PENDING": "SUBSCRIBE-PENDING",
-
-    /**
-     * value: "SUBSCRIBE-SUCCESS"
-     * @const
-     */
-    "SUBSCRIBE-SUCCESS": "SUBSCRIBE-SUCCESS",
-
-    /**
-     * value: "SUBSCRIBE-FAIL"
-     * @const
-     */
-    "SUBSCRIBE-FAIL": "SUBSCRIBE-FAIL",
-
-    /**
-     * value: "UNSUBSCRIBE-PENDING"
-     * @const
-     */
-    "UNSUBSCRIBE-PENDING": "UNSUBSCRIBE-PENDING",
-
-    /**
-     * value: "UNSUBSCRIBE-SUCCESS"
-     * @const
-     */
-    "UNSUBSCRIBE-SUCCESS": "UNSUBSCRIBE-SUCCESS"
-};
 
 
 

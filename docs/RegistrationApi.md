@@ -26,7 +26,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new antenny.RegistrationApi();
-let custId = null; // String | Customer Id for registration
+let custId = "custId_example"; // String | Customer Id for registration
 apiInstance.getRegistration(custId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -40,7 +40,7 @@ apiInstance.getRegistration(custId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custId** | [**String**](.md)| Customer Id for registration | 
+ **custId** | **String**| Customer Id for registration | 
 
 ### Return type
 

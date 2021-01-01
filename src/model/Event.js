@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Event model module.
  * @module model/Event
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Event {
     /**
@@ -91,7 +91,7 @@ Event.prototype['subscriptionId'] = undefined;
 Event.prototype['customerId'] = undefined;
 
 /**
- * @member {module:model/Event.LevelEnum} level
+ * @member {String} level
  */
 Event.prototype['level'] = undefined;
 
@@ -112,33 +112,6 @@ Event.prototype['modified'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>level</code> property.
- * @enum {String}
- * @readonly
- */
-Event['LevelEnum'] = {
-
-    /**
-     * value: "INFO"
-     * @const
-     */
-    "INFO": "INFO",
-
-    /**
-     * value: "WARNING"
-     * @const
-     */
-    "WARNING": "WARNING",
-
-    /**
-     * value: "ERROR"
-     * @const
-     */
-    "ERROR": "ERROR"
-};
 
 
 
