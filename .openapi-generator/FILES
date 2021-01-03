@@ -6,7 +6,9 @@ docs/Endpoint.md
 docs/Event.md
 docs/EventList.md
 docs/EventsApi.md
+docs/Header.md
 docs/InlineObject.md
+docs/Message.md
 docs/NewClient.md
 docs/NewSubscription.md
 docs/Registration.md
@@ -28,7 +30,9 @@ src/model/ClientList.js
 src/model/Endpoint.js
 src/model/Event.js
 src/model/EventList.js
+src/model/Header.js
 src/model/InlineObject.js
+src/model/Message.js
 src/model/NewClient.js
 src/model/NewSubscription.js
 src/model/Registration.js

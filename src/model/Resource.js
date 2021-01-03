@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import Header from './Header';
+import Message from './Message';
 
 /**
  * The Resource model module.
@@ -57,6 +59,12 @@ class Resource {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('headers')) {
+                obj['headers'] = ApiClient.convertToType(data['headers'], [Header]);
+            }
+            if (data.hasOwnProperty('messages')) {
+                obj['messages'] = ApiClient.convertToType(data['messages'], [Message]);
+            }
         }
         return obj;
     }
@@ -73,6 +81,16 @@ Resource.prototype['protocol'] = undefined;
  * @member {String} url
  */
 Resource.prototype['url'] = undefined;
+
+/**
+ * @member {Array.<module:model/Header>} headers
+ */
+Resource.prototype['headers'] = undefined;
+
+/**
+ * @member {Array.<module:model/Message>} messages
+ */
+Resource.prototype['messages'] = undefined;
 
 
 

@@ -18,7 +18,9 @@ import ClientList from './model/ClientList';
 import Endpoint from './model/Endpoint';
 import Event from './model/Event';
 import EventList from './model/EventList';
+import Header from './model/Header';
 import InlineObject from './model/InlineObject';
+import Message from './model/Message';
 import NewClient from './model/NewClient';
 import NewSubscription from './model/NewSubscription';
 import Registration from './model/Registration';
@@ -100,10 +102,22 @@ export {
     EventList,
 
     /**
+     * The Header model constructor.
+     * @property {module:model/Header}
+     */
+    Header,
+
+    /**
      * The InlineObject model constructor.
      * @property {module:model/InlineObject}
      */
     InlineObject,
+
+    /**
+     * The Message model constructor.
+     * @property {module:model/Message}
+     */
+    Message,
 
     /**
      * The NewClient model constructor.
