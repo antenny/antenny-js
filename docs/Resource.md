@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 
 * `ws` (value: `"ws"`)
 
+* `http` (value: `"http"`)
+
 
 
 

@@ -107,7 +107,13 @@ Resource['ProtocolEnum'] = {
      * value: "ws"
      * @const
      */
-    "ws": "ws"
+    "ws": "ws",
+
+    /**
+     * value: "http"
+     * @const
+     */
+    "http": "http"
 };
 
 
