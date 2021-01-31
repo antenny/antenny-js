@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Message model module.
  * @module model/Message
- * @version 1.1.0
+ * @version 1.3.0
  */
 class Message {
     /**

@@ -18,7 +18,7 @@ import Resource from './Resource';
 /**
  * The NewSubscription model module.
  * @module model/NewSubscription
- * @version 1.1.0
+ * @version 1.3.0
  */
 class NewSubscription {
     /**

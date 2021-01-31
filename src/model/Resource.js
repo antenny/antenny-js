@@ -18,7 +18,7 @@ import Message from './Message';
 /**
  * The Resource model module.
  * @module model/Resource
- * @version 1.1.0
+ * @version 1.3.0
  */
 class Resource {
     /**

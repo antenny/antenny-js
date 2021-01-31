@@ -21,7 +21,7 @@ import SubscriptionList from '../model/SubscriptionList';
 /**
 * Subscription service.
 * @module api/SubscriptionApi
-* @version 1.1.0
+* @version 1.3.0
 */
 export default class SubscriptionApi {
 

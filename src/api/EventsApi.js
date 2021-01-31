@@ -18,7 +18,7 @@ import EventList from '../model/EventList';
 /**
 * Events service.
 * @module api/EventsApi
-* @version 1.1.0
+* @version 1.3.0
 */
 export default class EventsApi {
 

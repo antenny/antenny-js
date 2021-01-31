@@ -17,7 +17,7 @@ import Event from './Event';
 /**
  * The EventList model module.
  * @module model/EventList
- * @version 1.1.0
+ * @version 1.3.0
  */
 class EventList {
     /**
